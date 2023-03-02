@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Docker系列（一）</title>
+      <link href="/2022/06/02/docker/"/>
+      <url>/2022/06/02/docker/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/images/docker.pdf">Docker 架构图</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>技术能力</title>
+      <link href="/2021/07/02/technical-capability/"/>
+      <url>/2021/07/02/technical-capability/</url>
+      
+        <content type="html"><![CDATA[<h2 id="技术能力："><a href="#技术能力：" class="headerlink" title="技术能力："></a>技术能力：</h2><p>到底什么是技术能力？<br>要解释清楚什么是技术能力还得看透技术能力的本质，从源头上来做剖析。挑选几个程序员日常的工作问题来做个剖析比对，从我们的日常感观中来辨识下哪些是有技术能力的做法，哪些是没啥技术能力的做法。</p><h3 id="两类日常工作"><a href="#两类日常工作" class="headerlink" title="两类日常工作"></a>两类日常工作</h3><p><strong>重复琐碎类工作</strong><br>有一类工作是专门处理其他组技术同学对组内业务的疑惑进行解答，我们称之为daily支持。比如咨询你负责的系统在开发环境有一个报错影响了他们的项目联调是什么原因。这种工作的典型特征就是，随时都可能有人来问你问题，还有可能是同一个问题不同的人来问你很多遍。这类工作称归纳为重复&#x2F;琐碎类工作。这类工作我们来看看几种做法：</p><ul><li>第一种：就事论事，把这个问题回答了结束。到这个程度你只是解决了一个具体的问题。很可惜我们很多技术同学都是处于这个层次。</li><li>第二种：解答完这个问题后即整理成文档，把排查步骤写清楚，提升自己和同组人的工作效率。到这个程度说明你看到并解决了内部效率问题。</li><li>第三种：将此排查问题的方法和逻辑固化为小工具给到咨询的同学去用，让他以后可以自助排查解决，这样既解决了别人的问题也彻底释放了自己和同组人的效能。到这个程度说明你重新定义了效能问题并找到更好提效的办法。</li><li>第四种：将此问题背后根因找到，从业务原理或者产品功能上去找解法。将技术工具抽象为业务功能的完善。到这个程度说明你已经从单纯的技术提效看到了架构合理性问题，并尝试在业务上寻求彻底根治的办法。<br>这四种不同的做法我们可以看出来，即使是这些重复的琐碎类工作，我们也可以从扩大受益面的角度去提炼价值，然后寻求多个层次的解法。在解决问题的过程中自然而然也锻炼了自己多层次的思考和抽象能力。</li></ul><p><strong>抽象复杂类工作</strong><br>还有一类工作是相对抽象和复杂的工作，它的典型特质就是需要只能感受到现象，很难找到根因，没有明确目标和固定解法，需要自己做方案定策略。举个实际中遇到的例子，就是在复杂的系统链路中往往会出现联调效率十分低下的问题，每个研发同学都在抱怨各种各样的问题，但就是没法去根治。面对这样的复杂抽象问题，也有好几种做法：</p><ul><li>第一种：找到抱怨的同学，问一问具体的问题是什么，然后针对性解决。</li><li>第二种：更加广泛收集问题，然后列出来表格，归类分析并安排负责人跟进解决，最后定期跟踪进度。</li><li>第三种：深入分析表格的中的问题并对问题进行抽象，从架构调优和产品功能的角度去寻找原因，并寻找解决这些问题带来的业务价值，并确定目标拆解路径，最后按照任务推进和跟踪进展。</li><li>第四种：从更全局角度去思考此目标与年度目标的关系，与组织发展的关系，思考如何扩大此事的效益，思考如何通过这些事的解决锻炼和培养团队同学。<br>可以看出来这种抽象复杂的工作，其实也有多种做法，看得更加细致是可以看到技术架构的调优，看得有深度可以与目标、组织成长结合在一起。当然也有很一般的做法，那就是纯粹单个问题解决，纯粹是变成项目经理，通过任务列表跟踪进度。</li></ul><h2 id="技巧-架构-价值"><a href="#技巧-架构-价值" class="headerlink" title="技巧-架构-价值"></a>技巧-架构-价值</h2><hr><p>技巧：工程，工具，方法 （研发能力）<br>架构：本质 模型 原则 （协作能力）<br>价值：愿景、目标、组织 （领导能力）</p><hr><p>每日反思，每日总结，每日目标<br>阶段性反思 总结 目标<br>观察现象-发现问题-解决解决-归纳问题</p><p><strong>单体力量：</strong><br>提高认知-行动验证-归纳总结 这是一个循环<br>能力和原则是核心。</p><p><strong>团队力量：</strong><br>结构化沟通<br>知道每个人的擅长和短处<br>组合每个达成目标。<br>沟通-协作是核心。</p><p><strong>领导能力：</strong><br>对问题本质的分析并有宏大的愿景<br>超越普通人百倍的认知<br>拥有实现目标的资源<br>核心是什么：等我做到了再写。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>项目制学习</title>
+      <link href="/2020/08/07/pbl/"/>
+      <url>/2020/08/07/pbl/</url>
+      
+        <content type="html"><![CDATA[<p>植根于中国，面向未来的小-初-高阶段创新教育项目，致力于培养「内心丰盈的个体、积极行动的公民」。 全面实践素养本位教育，提供不仅习得知识、更培养核心能力的课程体系； 构建基于学习者自我探索实现个性化发展的支持系统；共建温暖而自由的社区生活 从一可走出来的每一个人都可以支持人类命运共同体的可持续发展，善及万物，探求真理，坚毅笃行。</p><p>以「实践知识和技能」为基础，以「解决真实世界问题」为目标，通过基于项目的学习场景，学习者解决真实世界的问题。<br>通过项目制学习：可以获得 可持续发展的知识,合作技能,自主学习技能,项目管理技能,沟通技能,解决问题的技能</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分布式-一致性模型</title>
+      <link href="/2020/03/02/consistency-model/"/>
+      <url>/2020/03/02/consistency-model/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前提知识"><a href="#前提知识" class="headerlink" title="前提知识"></a>前提知识</h2><p>为了描述现实世界中：时间, 事件，顺序。</p><p><strong>全序关系（线性顺序）：</strong><br>对于 a，b，c 属于集合 S</p><blockquote><p>完全性：a&lt;&#x3D;b 或 b&lt;&#x3D;a<br>反对称性：若 a&lt;&#x3D;b 且 b&lt;&#x3D;a 则 a&#x3D;b<br>传递性：若 a&lt;&#x3D;b 且 b&lt;&#x3D;c 则 a&lt;&#x3D;c</p></blockquote><p><strong>偏序关系：</strong><br>对于 a，b，c 属于集合 S</p><blockquote><p>自反性：a&lt;&#x3D;a<br>反对称性：若 a&lt;&#x3D;b 且 b&lt;&#x3D;a 则 a&#x3D;b<br>传递性：若 a&lt;&#x3D;b 且 b&lt;&#x3D;c 则 a&lt;&#x3D;c</p></blockquote><p><strong>物理时钟：</strong><br>计算机中的时钟是一个物理硬件通常称为计时器，计算机的计时器通常是一个石英晶体管。石英晶体管以一定的频率振荡。然后有两个寄存器与每个石英晶体相联，一个是计数器，另一个是保持寄存器。石英晶体振荡使得计数器减1。当计数器为0时产生一个中断，然后计数器从保持寄存器中重新装入初始值。计数器产生的中断称为时钟滴答。当产生一个中断时，操作系统就会响应中断并调用中断处理程序将时钟存储器中的值加1。计算中物理时钟的的主要问题是时钟偏移（clock skew）。通俗点描述时钟偏移就是钟摆摆动的偏移变慢或者变快或者时快时慢导致时钟不同步。<br>对单台机器没有影响，在分布式系统中，整个分布式系统中的时钟不同步的话会导致依赖时钟同步的程序有问题，就会产生时序不一致。<br>解决物理时钟不同步的算法（网络时间协议、Berkeley算法、Critian算法）</p><p><strong>逻辑时钟：</strong><br>与物理时钟不同逻辑时钟关注点在事件先后的相对性 ，这个时间不一定与实际时间相同。<br>逻辑时钟的概念是由著名的分布式系统科学家 Leslie Lamport (2013年图灵奖得主) 提出的， 在他的那篇著名的论文「Time, Clocks and the Ordering of Events in a Distributed System」 的介绍上，lamport提到了著名的狭义相对论：</p><blockquote><p>Special relativity teaches us that there is no invariant total ordering of events in space-time;  different observers can disagree about which of two events happened first. There is only a partial order in which an event e1 precedes an event e2 iff e1 can causally affect e2.<br>               Leslie Lamport 《Time, Clocks and the Ordering of Events …》</p></blockquote><p>爱因斯坦的狭义相对论告诉我们，时空中不存在绝对的全序事件顺序，不同的观察者可能对哪个事件是先发生的无法达成一致。 但是有偏序关系存在，当事件e2是由事件e1引起的时候，e1和e2之间才有先后关系。</p><p><strong>【拓展】</strong></p><blockquote><p>向量时钟<br>版本向量<br>区间树时钟</p></blockquote><h2 id="什么是一致性："><a href="#什么是一致性：" class="headerlink" title="什么是一致性："></a>什么是一致性：</h2><p>定义为:<br>Validity：有效性（合法性），如果所有节点中的数据只有 0 和 1 两种，那么最后达成一致的决议一定是 0 和 1 这两种的一个。不可能说算法莫名其妙的达成一个一致的数值如 -1。<br>Agreement：一致性，所有节点达成一致的决议。<br>Termination：终止性，所有正常运行的节点最终都能够做出决议。</p><h2 id="线性一致性-Linearizability-（原子一致性）"><a href="#线性一致性-Linearizability-（原子一致性）" class="headerlink" title="线性一致性 (Linearizability)（原子一致性）"></a>线性一致性 (Linearizability)（原子一致性）</h2><p>线性一致性利用了事件的提交顺序，它保证任何读操作得到的数据，其顺序跟读&#x2F;写事件的提交顺序一致。<br>要求：全局时钟 全序</p><h2 id="顺序一致性-Linearizability"><a href="#顺序一致性-Linearizability" class="headerlink" title="顺序一致性 (Linearizability)"></a>顺序一致性 (Linearizability)</h2><p>只保证每个节点上的事件顺序一致，对节点之间的事件顺序只有非常宽松的要求。<br>要求：单节点 全序 多节点 偏序</p><h2 id="因果一致性-Linearizability"><a href="#因果一致性-Linearizability" class="headerlink" title="因果一致性 (Linearizability)"></a>因果一致性 (Linearizability)</h2><p>同样只保证每个节点上的事件顺序一致，但是对节点之间的事件顺序的要求比顺序一致性更宽松<br>要求：逻辑时钟 偏序</p><h2 id="最终一致性-Linearizability"><a href="#最终一致性-Linearizability" class="headerlink" title="最终一致性 (Linearizability)"></a>最终一致性 (Linearizability)</h2><p>总会存在一个时刻（而不是立刻），系统达到一致的状态</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分布式-理论</title>
+      <link href="/2020/03/01/distributed-theory/"/>
+      <url>/2020/03/01/distributed-theory/</url>
+      
+        <content type="html"><![CDATA[<h2 id="CAP-定理-（同步网络模型和异步网络模型）"><a href="#CAP-定理-（同步网络模型和异步网络模型）" class="headerlink" title="CAP 定理 （同步网络模型和异步网络模型）"></a>CAP 定理 （同步网络模型和异步网络模型）</h2><p>CAP 定理是分布式领域中闻名遐迩的一个基石定理。<a href="https://zh.wikipedia.org/wiki/CAP%E5%AE%9A%E7%90%86">CAP 定理</a>又叫做布鲁斯定理, 该定理源于埃里克·布鲁尔在2000年的分布式计算原理研讨会上提出的一个猜想， 在2002年麻省理工学院的Gilbert和Lynch发表了证明[1]，使之成为一个定理：分布式系统不可能同时保证 一致性(Consistency)、 可用性(Availability) 和 分区容忍性(Partition tolerance)。</p><p>这个定理也可以表达为： 在网络分区发生的情况下，分布式系统不能同时保证一致性和可用性。 除非是单节点系统，否则无法同时保证 CA。</p><hr><h4 id="一致性-Consistency"><a href="#一致性-Consistency" class="headerlink" title="一致性 | Consistency"></a>一致性 | Consistency</h4><p><strong>定义：分布式系统中多个节点的数据返回始终一致的性质。(Consistency &#x3D; two reads return the same value.)</strong></p><p>Gilbert 和 Lynch 对一致性的描述是这样的:</p><blockquote><p>Any read operation that begins after a write operation completes must return that value, or the result of a later write operation. All nodes see the same data at the same time.</p></blockquote><blockquote><p>在一个具有一致性的分布式系统中，一旦一个对任一节点的写入返回成功，后续对这个系统中其他任意节点的读操作都应该可以返回这个更新的值。所有节点在同一时刻的看到的数据是一样的。</p></blockquote><p><strong>分类：</strong></p><blockquote><p>弱一致性: 向系统写入一个值后，后续的读操作可能读出来，也可能读不出来。(After a write, reads may or may not see it.)</p></blockquote><blockquote><p>最终一致性: 向系统写入一个值后，后续立刻的读操作可能读不出来，但是在某个时间段后，读取一定成功。 例如，读写分离的关系型数据库。(After a write, reads will eventually see it.)</p></blockquote><blockquote><p>强一致性: 向系统写入一个值后，后续任意时刻的读取一定成功。(After a write, reads will always see it.)</p></blockquote><hr><h4 id="可用性-Availability"><a href="#可用性-Availability" class="headerlink" title="可用性 | Availability"></a>可用性 | Availability</h4><p><strong>定义: 在分布式系统中，可用性是指每次请求都能获取到非错的响应的性质。（Availability &#x3D; Reads and writes always succeed.）</strong></p><p>Gilbert 和 Lynch 对一致性的描述是这样的:</p><blockquote><p>Every request received by a non-failing node in the system must result in a response. That is, any algorithm used by the service must eventually terminate.</p></blockquote><blockquote><p>如果客户端发送一个请求给分布式系统中的一个无故障的节点， 这个节点必须回复请求。 就是，系统所用的任何算法都必须最终结束。</p></blockquote><p><strong>怎么样提高可用性：</strong><br>冗余和故障转移(参考高可用的知识)</p><hr><h4 id="分区容忍性-Partition-tolerance"><a href="#分区容忍性-Partition-tolerance" class="headerlink" title="分区容忍性 | Partition tolerance"></a>分区容忍性 | Partition tolerance</h4><p><strong>定义：当两个节点之间的网络不再连通，相当于分成了几块分区，所以叫做分区现象。如果不能在通信时限内达成数据一致，就意味着发生了分区。分区容忍性是指即使分区现象发生，系统仍然可以工作的性质。（Continues to function even if there is a “partition”.）</strong></p><hr><h4 id="为什么不能同时满足：-一致性-可用性-分区容忍性"><a href="#为什么不能同时满足：-一致性-可用性-分区容忍性" class="headerlink" title="为什么不能同时满足： 一致性 可用性 分区容忍性"></a>为什么不能同时满足： 一致性 可用性 分区容忍性</h4><p>   原因：网络是不稳定的。 网络中的节点也不稳定，丢包、延迟、中断都糊发生。所以导致分区现象在现实网络中不可避免，也就是说，现实中我们只能在 C 和 A中做选择。</p><hr><h2 id="BASE-定理"><a href="#BASE-定理" class="headerlink" title="BASE 定理"></a>BASE 定理</h2><p>有eBay的架构师Dan Pritchett源于对大规模分布式系统的实践总结：<br>BASE是指基本可用（Basically Available）、软状态（ Soft State）、最终一致性（ Eventual Consistency）</p><p><strong>基本可用（Basically Available）</strong><br>基本可用是指分布式系统在出现故障的时候，允许损失部分可用性，即保证核心可用。</p><p><strong>软状态（ Soft State）</strong><br>软状态是指允许系统存在中间状态，而该中间状态不会影响系统整体可用性。</p><p><strong>最终一致性（ Eventual Consistency）</strong><br>最终一致性是指系统中的所有数据副本经过一定时间后，最终能够达到一致的状态。弱一致性和强一致性相反，最终一致性是弱一致性的一种特殊情况。</p><hr><h2 id="FLP-定理-（异步网络模型中）"><a href="#FLP-定理-（异步网络模型中）" class="headerlink" title="FLP 定理 （异步网络模型中）"></a>FLP 定理 （异步网络模型中）</h2><p>由Fischer、Lynch和Patterson三位科学家于1985年发表的论文《Impossibility of Distributed Consensus with One Faulty Process》：<br><strong>在网络可靠，但允许节点失效（即便只有一个）的最小化异步模型系统中，不存在一个可以解决一致性问题的确定性共识算法。</strong></p><p>[参考]<br><a href="https://www.inlighting.org/archives/understand-flp-impossibility">【理解FLP论文】</a> <a href="https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf">【FLP论文】</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分布式-网络\错误模型</title>
+      <link href="/2020/02/17/distributed-network-fault/"/>
+      <url>/2020/02/17/distributed-network-fault/</url>
+      
+        <content type="html"><![CDATA[<h2 id="分布式系统中的网络模型"><a href="#分布式系统中的网络模型" class="headerlink" title="分布式系统中的网络模型"></a>分布式系统中的网络模型</h2><p><strong>同步网络:</strong></p><ol><li>所有节点的时钟漂移有上限。</li><li>网络的传输时间有上限。</li><li>所有节点的计算速度一样。</li></ol><p><strong>异步网络：</strong></p><ol><li>节点的时钟漂移无上限。</li><li>消息的传输延迟无上限。</li><li>节点计算的速度不可预料。</li></ol><h2 id="分布式系统中的故障模型"><a href="#分布式系统中的故障模型" class="headerlink" title="分布式系统中的故障模型"></a>分布式系统中的故障模型</h2><p><strong>拜占庭错误:</strong><br> 这是最难处理的情况, 一个节点压根就不按照程序逻辑执行, 对它的调用会返回给你随意或者混乱的结果. 要解决拜占庭式故障需要有同步网络, 并且故障节点必须小于1&#x2F;3或者消息传递过程中不可篡改。<br> 算法：PBFT<br><strong>崩溃恢复错误:</strong><br>它比byzantine类故障加了一个限制, 那就是节点总是按照程序逻辑执行, 结果是正确的. 但是不保证消息返回的时间. crash的情况还要分健忘(amnesia)和非健忘的两种情况.对于健忘的情况, 是指这个crash的节点重启后没有完整的保存crash之前的状态信息, 非健忘是指这个节点crash之前能把状态完整的保存在持久存储上, 启动之后可以再次按照以前的状态继续执行和通信。<br>算法： Paxos和Raft<br><strong>omission failures:</strong><br>比crash-recovery多了一个限制, 就是一定要非健忘。<br><strong>崩溃停止错误:</strong><br>也叫做crash failure或者fail-stop failures, 它比omission failure多了一个故障发生后要停止响应的要求。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>书单</title>
+      <link href="/2019/12/23/sum-up-2019/"/>
+      <url>/2019/12/23/sum-up-2019/</url>
+      
+        <content type="html"><![CDATA[<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p><strong><a href="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/books/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode.js.pdf">深入浅出Nodejs</a></strong></p><p><strong><a href="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/books/%E9%AB%98%E6%80%A7%E8%83%BDMySQL.pdf">高性能MySQL</a></strong></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
