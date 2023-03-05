@@ -93,6 +93,19 @@
     </entry>
     
     
+    
+    <entry>
+      <title>auth</title>
+      <link href="/2018/07/28/auth/"/>
+      <url>/2018/07/28/auth/</url>
+      
+        <content type="html"><![CDATA[<h2 id="鉴权"><a href="#鉴权" class="headerlink" title="鉴权"></a>鉴权</h2><p><strong>你将了解-10种鉴权方法</strong></p><h2 id="什么是认证、授权、鉴权、权限控制"><a href="#什么是认证、授权、鉴权、权限控制" class="headerlink" title="什么是认证、授权、鉴权、权限控制"></a>什么是认证、授权、鉴权、权限控制</h2><p><strong>认证(Identification)</strong><br>是指根据声明者所特有的识别信息，确认声明者的身份。<br>比如我们常见的认证技术：</p><ul><li>用户名和密码</li><li>用户手机：手机短信、手机二维码扫描、手势密码</li><li>用户的电子邮箱</li><li>用户的生物学特征：指纹、语音、眼睛虹膜</li></ul><p><strong>授权(Authorization)</strong><br>在信息安全领域是指资源所有者委派执行者，赋予执行者指定范围的资源操作权限，以便对资源的相关操作。<br>比如： web 服务器的 session 机制、web 浏览器的 cookie 机制、颁发授权令牌（token）等都是一个授权的机制。</p><p><strong>鉴权(Authentication)</strong><br>在信息安全领域是指对于一个声明者所声明的身份权利，对其所声明的真实性进行鉴别确认的过程。</p><p><strong>权限控制(Access&#x2F;Permission Control)</strong><br>将可执行的操作定义为权限列表，然后判断操作是否允许&#x2F;禁止。<br>对于权限控制，可以分为两部分进行理解：一个是权限，另一个是控制。权限是抽象的逻辑概念，而控制是具体的实现方式。</p><p><strong>认证-&gt;授权-&gt;鉴权-&gt;权限控制</strong></p><h2 id="HTTP-基本鉴权"><a href="#HTTP-基本鉴权" class="headerlink" title="HTTP 基本鉴权"></a>HTTP 基本鉴权</h2><h2 id="Session-Cookie-鉴权"><a href="#Session-Cookie-鉴权" class="headerlink" title="Session-Cookie 鉴权"></a>Session-Cookie 鉴权</h2><h2 id="Token-鉴权"><a href="#Token-鉴权" class="headerlink" title="Token 鉴权"></a>Token 鉴权</h2><h2 id="JWT（JSON-Web-Token）鉴权"><a href="#JWT（JSON-Web-Token）鉴权" class="headerlink" title="JWT（JSON Web Token）鉴权"></a>JWT（JSON Web Token）鉴权</h2><h2 id="单点登录（Single-Sign-On）"><a href="#单点登录（Single-Sign-On）" class="headerlink" title="单点登录（Single Sign On）"></a>单点登录（Single Sign On）</h2><h3 id="同域单点登录"><a href="#同域单点登录" class="headerlink" title="同域单点登录"></a>同域单点登录</h3><ol><li>客户端： 用户访问某个子系统时（例如 a.baidu.com），如果没有登录，则跳转至 SSO 认证中心提供的登录页面进行登录；</li><li>服务端： 登录认证后，服务端把登录用户的信息存储于 Session 中，并且附加在响应头的 Set-Cookie 字段中，设置 Cookie 的 Domain 为 .baidu.com ；</li><li>客户端：用户访问某个子系统（例如 b.baidu.com），客户再次发送请求时，携带主域名 Domain 下的 Cookie 给服务器，此时服务端就可以通过该 Cookie 来验证登录状态了；</li></ol><h3 id="非同域单点登录"><a href="#非同域单点登录" class="headerlink" title="非同域单点登录"></a>非同域单点登录</h3><ol><li><p>客户端： 开始访问系统 A；</p></li><li><p>系统 A： 发现用户未登录，重定向至 CAS 认证服务（sso.com），同时 URL 地址参数携带登录成功后回跳到系统 A 的页面链接（sso.com&#x2F;login?redirectUrl&#x3D;a.baidu.com)</p></li><li><p>CAS 认证服务： 发现请求 Cookie 中没有携带登录的票据凭证（TGC），所以 CAS 认证服务判定用户处于 未登录 状态，重定向用户页面至 CAS 的登录界面，用户在 CAS 的登录页面上进行登录操作。</p></li><li><p>客户端： 输入用户名密码进行 CAS 系统认证；</p></li><li><p>CAS 认证服务： 校验用户信息，并且 生成 TGC 放入自己的 Session 中，同时以 Set-Cookie 形式写入 Domain 为 sso.com 的域下 ；同时生成一个 授权令牌 ST (Service Ticket) ，然后重定向至系统 A(a.baidu.com) 的地址，重定向的地址中包含生成的 ST（重定向地址：a.baidu.com?token&#x3D;ST-345678）</p></li><li><p>系统 A： 拿着 ST 向 CAS 认证服务发送请求，CAS 认证服务验证票据 (ST) 的有效性。验证成功后，系统 A 知道用户已经在 CAS 登录了（其中的 ST 可以保存到 Cookie 或者本地中），系统 A 服务器使用该票据 (ST) 创建与用户的会话，称为局部会话，返回受保护资源；<br>到这里客户端就可以跟系统 A 愉快的交往啦 ~</p></li><li><p>客户端： 开始访问系统 B(b.baidu2.com)；</p></li><li><p>系统 B： 发现用户未登录，重定向至 SSO 认证服务，并将自己的地址作为参数传递，并附上在 sso.com 域下的 cookie 值是第五步生成的 TGC；</p></li><li><p>CAS 认证服务： CAS 认证服务中心发现用户已登录，跳转回系统 B 的地址，并附上票据 (ST) ;</p></li><li><p>系统 B： 拿到票据 (ST)，去 CAS 认证服务验证票据 (ST) 的有效性。验证成功后，客户端也可以跟系统 B 交往了 ~</p></li></ol><h2 id="OAuth-2-0"><a href="#OAuth-2-0" class="headerlink" title="OAuth 2.0"></a>OAuth 2.0</h2><h2 id="联合登录和信任登录"><a href="#联合登录和信任登录" class="headerlink" title="联合登录和信任登录"></a>联合登录和信任登录</h2><h2 id="唯一登录"><a href="#唯一登录" class="headerlink" title="唯一登录"></a>唯一登录</h2><h2 id="扫码登录"><a href="#扫码登录" class="headerlink" title="扫码登录"></a>扫码登录</h2><h2 id="10-一键登录（适用于原生APP）"><a href="#10-一键登录（适用于原生APP）" class="headerlink" title="10. 一键登录（适用于原生APP）"></a>10. 一键登录（适用于原生APP）</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
   
   
 </search>
