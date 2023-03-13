@@ -103,6 +103,7 @@
   <div class="post-content-outer">
     <div class="post-intro">
       <div class="post-title animate__animated  animate__fadeInUp">auth</div>
+      <div class="post-title animate__animated  animate__fadeInUp"></div>
       <div class="meta-intro animate__animated  animate__fadeInUp">7月 28 2018</div>
       
     </div>
@@ -143,7 +144,7 @@
 </li>
 <li><p>CAS 认证服务： 校验用户信息，并且 生成 TGC 放入自己的 Session 中，同时以 Set-Cookie 形式写入 Domain 为 sso.com 的域下 ；同时生成一个 授权令牌 ST (Service Ticket) ，然后重定向至系统 A(a.baidu.com) 的地址，重定向的地址中包含生成的 ST（重定向地址：a.baidu.com?token&#x3D;ST-345678）</p>
 </li>
-<li><p>系统 A： 拿着 ST 向 CAS 认证服务发送请求，CAS 认证服务验证票据 (ST) 的有效性。验证成功后，系统 A 知道用户已经在 CAS 登录了（其中的 ST 可以保存到 Cookie 或者本地中），系统 A 服务器使用该票据 (ST) 创建与用户的会话，称为局部会话，返回受保护资源；<br>到这里客户端就可以跟系统 A 愉快的交往啦 ~</p>
+<li><p>系统 A： 拿着 ST 向 CAS 认证服务发送请求，CAS 认证服务验证票据 (ST) 的有效性。验证成功后，系统 A 知道用户已经在 CAS 登录了（其中的 ST 可以保存到 Cookie 或者本地中），系统 A 服务器使用该票据 (ST) 创建与用户的会话，称为局部会话，返回受保护资源；到这里客户端就可以跟系统 A 愉快的交往啦 ~</p>
 </li>
 <li><p>客户端： 开始访问系统 B(b.baidu2.com)；</p>
 </li>
@@ -202,6 +203,7 @@
     </div>
     </div>
 </div>
+
 
 
 

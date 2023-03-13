@@ -50,9 +50,13 @@ span {
 }
 .menu-outer {
   font-family: Gothic;
+  background: #fff;
   width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
 }
 .menu-inner {
   width: 1130px;
@@ -127,6 +131,7 @@ span {
   color: #333333;
 }
 .body-outer {
+  margin-top: 120px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -135,6 +140,7 @@ span {
 .body-inner {
   width: 1130px;
   background-color: #fff;
+  min-height: calc(76vh);
 }
 .intro-content {
   margin-top: 150px;
@@ -197,7 +203,8 @@ a {
   font-size: 2em;
   margin: 40px 0px 30px 0px;
   font-family: Merriweather;
-  text-align: center;
+  text-align: left;
+  border-bottom: 1px solid #eaecef;
 }
 .archive-post {
   line-height: 1.5em;
@@ -206,23 +213,34 @@ a {
   border-radius: 3px;
   transition: 0.4s;
   display: flex;
-  margin: 7px 0px;
+  margin: 10px 0px;
+  padding: 10px;
 }
-.archive-post:hover .archive-post-title {
+.archive-post:hover .archive-post-title,
+.archive-post:hover .archive-post-date {
   color: #1A98FF;
 }
+.archive-post:focus,
+.archive-post:hover {
+  background-color: #f8f9fa;
+}
 .archive-post-title {
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition: 0.4s;
   font-family: Gothic;
   margin-right: auto;
 }
+.archive-post-summary {
+  font-size: 1.2em;
+  transition: 0.4s;
+  font-family: Gothic;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .archive-post-date {
   font-family: Merriweather;
-  color: #1A98FF;
   font-weight: 1000;
-  background-color: #DDF0FF;
-  font-size: 0.8em;
+  font-size: 1em;
   border-radius: 5px;
   padding: 0px 10px;
   transition: all 0.4s;
@@ -362,6 +380,26 @@ a {
 .img-show-post-cover img:hover {
   transform: scale(1.05);
 }
+.post-content,
+post-custom {
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media (max-width: 767px) {
+  .post-content,
+  post-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 424px) {
+  .post-content,
+  post-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 .post-intro {
   margin-bottom: 30px;
 }
@@ -425,6 +463,7 @@ a {
   letter-spacing: 0.7px;
   line-height: 2;
 }
+.post-content-inner h1,
 .post-content-inner h2,
 .post-content-inner h3,
 .post-content-inner h4,
@@ -432,34 +471,47 @@ a {
 .post-content-inner h6 {
   margin: 15px 0px;
   color: #333333;
-  font-weight: normal;
   font-family: Gothic;
+  border-bottom: 1px;
+  font-weight: bold;
+}
+.post-content-inner h1 {
+  font-size: 2em;
+  margin: 30px 0px;
 }
 .post-content-inner h2 {
-  font-size: 1.65em;
+  font-size: 1.5em;
   margin: 30px 0px;
+  color: #1a202c;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+.post-content-inner h2::before {
+  border-bottom: 1px solid #eaecef;
 }
 .post-content-inner h2::after {
   content: "#";
   font-family: Merriweather;
   display: inline-block;
   color: #e3e3e3;
-  margin-left: 0.5rem;
   font-weight: 1000;
 }
 .post-content-inner h3 {
   font-size: 1.25em;
   display: inline-block;
-  box-shadow: inset 0 -1rem 0 #e3e3e3;
+  border-bottom: 1px solid #eaecef;
 }
 .post-content-inner h4 {
   font-size: 1.15em;
+}
+.post-content-inner h4::before {
+  border-bottom: 0.1px solid #eaecef;
 }
 .post-content-inner h5 {
   font-size: 1em;
 }
 .post-content-inner h6 {
-  font-size: 1em;
+  font-size: 0.75em;
 }
 .post-content-inner blockquote {
   border-left: 4.2px solid #e3e3e3;
@@ -489,11 +541,11 @@ strong {
   display: inline-block;
 }
 hr {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   height: 3px;
   border: none;
-  background-color: #e3e3e3;
+  background-color: #eaecef;
 }
 pre {
   margin-top: 10px;
@@ -515,7 +567,7 @@ ol {
   counter-increment: li;
 }
 .post-content-inner ol li::before {
-  content: counter(li);
+  content: counter(li) ".";
   font-family: Merriweather;
   color: #333333;
   margin-right: 0.7em;
@@ -529,7 +581,7 @@ ol {
   margin: 6px 0px;
 }
 .post-content-inner ul li::before {
-  content: "◆";
+  content: "·";
   font-size: 0.8em;
   font-family: Merriweather;
   color: #898FA0;
@@ -621,7 +673,6 @@ code {
   font-size: 0.8em;
 }
 .toc-top li::before {
-  content: counter(li);
   font-size: 0.8em;
   font-family: Merriweather;
   color: #898FA0;
@@ -727,7 +778,7 @@ li p {
   counter-increment: li;
 }
 .post-content-inner .post-content-inner-space .space-toc-main li::before {
-  content: counter(li);
+  content: counter(li) ".";
   font-size: 0.8em;
   font-family: Merriweather;
   color: #898FA0;

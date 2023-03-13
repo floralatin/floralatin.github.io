@@ -103,6 +103,7 @@
   <div class="post-content-outer">
     <div class="post-intro">
       <div class="post-title animate__animated  animate__fadeInUp">分布式-理论</div>
+      <div class="post-title animate__animated  animate__fadeInUp"></div>
       <div class="meta-intro animate__animated  animate__fadeInUp">3月 01 2020</div>
       
     </div>
@@ -115,7 +116,6 @@
         
         <h2 id="CAP-定理-（同步网络模型和异步网络模型）"><a href="#CAP-定理-（同步网络模型和异步网络模型）" class="headerlink" title="CAP 定理 （同步网络模型和异步网络模型）"></a>CAP 定理 （同步网络模型和异步网络模型）</h2><p>CAP 定理是分布式领域中闻名遐迩的一个基石定理。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/CAP%E5%AE%9A%E7%90%86">CAP 定理</a>又叫做布鲁斯定理, 该定理源于埃里克·布鲁尔在2000年的分布式计算原理研讨会上提出的一个猜想， 在2002年麻省理工学院的Gilbert和Lynch发表了证明[1]，使之成为一个定理：分布式系统不可能同时保证 一致性(Consistency)、 可用性(Availability) 和 分区容忍性(Partition tolerance)。</p>
 <p>这个定理也可以表达为： 在网络分区发生的情况下，分布式系统不能同时保证一致性和可用性。 除非是单节点系统，否则无法同时保证 CA。</p>
-<hr>
 <h4 id="一致性-Consistency"><a href="#一致性-Consistency" class="headerlink" title="一致性 | Consistency"></a>一致性 | Consistency</h4><p><strong>定义：分布式系统中多个节点的数据返回始终一致的性质。(Consistency &#x3D; two reads return the same value.)</strong></p>
 <p>Gilbert 和 Lynch 对一致性的描述是这样的:</p>
 <blockquote>
@@ -134,7 +134,6 @@
 <blockquote>
 <p>强一致性: 向系统写入一个值后，后续任意时刻的读取一定成功。(After a write, reads will always see it.)</p>
 </blockquote>
-<hr>
 <h4 id="可用性-Availability"><a href="#可用性-Availability" class="headerlink" title="可用性 | Availability"></a>可用性 | Availability</h4><p><strong>定义: 在分布式系统中，可用性是指每次请求都能获取到非错的响应的性质。（Availability &#x3D; Reads and writes always succeed.）</strong></p>
 <p>Gilbert 和 Lynch 对一致性的描述是这样的:</p>
 <blockquote>
@@ -144,16 +143,12 @@
 <p>如果客户端发送一个请求给分布式系统中的一个无故障的节点， 这个节点必须回复请求。 就是，系统所用的任何算法都必须最终结束。</p>
 </blockquote>
 <p><strong>怎么样提高可用性：</strong><br>冗余和故障转移(参考高可用的知识)</p>
-<hr>
 <h4 id="分区容忍性-Partition-tolerance"><a href="#分区容忍性-Partition-tolerance" class="headerlink" title="分区容忍性 | Partition tolerance"></a>分区容忍性 | Partition tolerance</h4><p><strong>定义：当两个节点之间的网络不再连通，相当于分成了几块分区，所以叫做分区现象。如果不能在通信时限内达成数据一致，就意味着发生了分区。分区容忍性是指即使分区现象发生，系统仍然可以工作的性质。（Continues to function even if there is a “partition”.）</strong></p>
-<hr>
 <h4 id="为什么不能同时满足：-一致性-可用性-分区容忍性"><a href="#为什么不能同时满足：-一致性-可用性-分区容忍性" class="headerlink" title="为什么不能同时满足： 一致性 可用性 分区容忍性"></a>为什么不能同时满足： 一致性 可用性 分区容忍性</h4><p>   原因：网络是不稳定的。 网络中的节点也不稳定，丢包、延迟、中断都糊发生。所以导致分区现象在现实网络中不可避免，也就是说，现实中我们只能在 C 和 A中做选择。</p>
-<hr>
 <h2 id="BASE-定理"><a href="#BASE-定理" class="headerlink" title="BASE 定理"></a>BASE 定理</h2><p>有eBay的架构师Dan Pritchett源于对大规模分布式系统的实践总结：<br>BASE是指基本可用（Basically Available）、软状态（ Soft State）、最终一致性（ Eventual Consistency）</p>
 <p><strong>基本可用（Basically Available）</strong><br>基本可用是指分布式系统在出现故障的时候，允许损失部分可用性，即保证核心可用。</p>
 <p><strong>软状态（ Soft State）</strong><br>软状态是指允许系统存在中间状态，而该中间状态不会影响系统整体可用性。</p>
 <p><strong>最终一致性（ Eventual Consistency）</strong><br>最终一致性是指系统中的所有数据副本经过一定时间后，最终能够达到一致的状态。弱一致性和强一致性相反，最终一致性是弱一致性的一种特殊情况。</p>
-<hr>
 <h2 id="FLP-定理-（异步网络模型中）"><a href="#FLP-定理-（异步网络模型中）" class="headerlink" title="FLP 定理 （异步网络模型中）"></a>FLP 定理 （异步网络模型中）</h2><p>由Fischer、Lynch和Patterson三位科学家于1985年发表的论文《Impossibility of Distributed Consensus with One Faulty Process》：<br><strong>在网络可靠，但允许节点失效（即便只有一个）的最小化异步模型系统中，不存在一个可以解决一致性问题的确定性共识算法。</strong></p>
 <p>[参考]<br><a target="_blank" rel="noopener" href="https://www.inlighting.org/archives/understand-flp-impossibility">【理解FLP论文】</a> <a target="_blank" rel="noopener" href="https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf">【FLP论文】</a></p>
 
@@ -204,6 +199,7 @@
     </div>
     </div>
 </div>
+
 
 
 
