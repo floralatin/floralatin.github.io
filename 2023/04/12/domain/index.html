@@ -1,0 +1,551 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  Domain |    Floralatin</title>
+  <meta name="description" content="A minimalist theme for hexo.">
+  <!-- 标签页图标 -->
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Floralatin
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              博客
+            </li>
+          </a>
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              关于
+            </li>
+          </a>
+        
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Floralatin
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>博客</span>
+      </div>
+    </a>
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>关于</span>
+      </div>
+    </a>
+  
+  
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">domain</div>
+      <div class="post-title animate__animated  animate__fadeInUp"></div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">4月 12 2023</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="短地址服务设计"><a href="#短地址服务设计" class="headerlink" title="短地址服务设计"></a>短地址服务设计</h1><h2 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h2><h3 id="1-功能需求："><a href="#1-功能需求：" class="headerlink" title="1.功能需求："></a>1.功能需求：</h3><ol>
+<li>用户可以通过接口将长的URL转换为短的URL。</li>
+<li>用户可以通过短的URL访问原始的URL。</li>
+<li>需要提供统计数据，包括访问量、转换量等。</li>
+</ol>
+<h3 id="2-非功能性需求："><a href="#2-非功能性需求：" class="headerlink" title="2.非功能性需求："></a>2.非功能性需求：</h3><ol>
+<li>高可用性：系统应该能够在故障或异常情况下保持可用。</li>
+<li>高性能：系统应该能够快速响应请求，处理大量并发访问。</li>
+<li>可扩展性：系统应该能够轻松地进行水平扩展以应对用户量的增长。</li>
+<li>安全性：系统应该能够轻松地过滤黑名单用户和ip，防止各种流量和恶意攻击。</li>
+</ol>
+<h3 id="3-扩展要求：（非必需）"><a href="#3-扩展要求：（非必需）" class="headerlink" title="3.扩展要求：（非必需）"></a>3.扩展要求：（非必需）</h3><ol>
+<li>自定义短码长度：用户可以指定生成的短码长度。</li>
+<li>失效时间：短码可以设置过期时间，过期后无法访问。</li>
+</ol>
+<h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><p>   <a target="_blank" rel="noopener" href="https://github.com/floralatin/domain">https://github.com/floralatin/domain</a></p>
+<h2 id="二、架构设计"><a href="#二、架构设计" class="headerlink" title="二、架构设计"></a>二、架构设计</h2><h3 id="1-架构图"><a href="#1-架构图" class="headerlink" title="1.架构图:"></a>1.架构图:</h3><p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/images/projects/domain/architecture_design.png" >
+        </sapn>
+      </p>
+<h3 id="2-功能模块："><a href="#2-功能模块：" class="headerlink" title="2.功能模块："></a>2.功能模块：</h3><ol>
+<li>分布式ID生成器：用来生成唯一Id<br>使用算法41位时间+6位业务ID+6位数据中心ID+10位序列号<br>然后转换成62进制并取后8位作为短地址code码</li>
+<li>用户模块：用户创建和token生成</li>
+<li>统计模块：用来统计短地址访问信息，每次访问短地址就会记录客户端的信息</li>
+</ol>
+<h3 id="3-技术栈："><a href="#3-技术栈：" class="headerlink" title="3. 技术栈："></a>3. 技术栈：</h3><p>node + express + typescript + redis + mongodb k8s+ docker 部署</p>
+<h3 id="4-数据库："><a href="#4-数据库：" class="headerlink" title="4. 数据库："></a>4. 数据库：</h3><p>最新的全世界网页统计80亿, 海量数据，使用Nosql来存储</p>
+<ol>
+<li>NoSql 文档存储可以快速添加扩展字段。</li>
+<li>mongodb的分片技术很好的支持海量数据</li>
+</ol>
+<h3 id="5-API设计："><a href="#5-API设计：" class="headerlink" title="5. API设计："></a>5. API设计：</h3><ol>
+<li>定义系统的API接口，包括请求方法、URL、请求参数、返回结果等。</li>
+</ol>
+<h3 id="6-部署方案："><a href="#6-部署方案：" class="headerlink" title="6. 部署方案："></a>6. 部署方案：</h3><p>用k8s和 docker 部署</p>
+<ol>
+<li>容器化隔离了硬件设施环境</li>
+<li>k8s可以很好的对进行管理和快速的动态水平扩展</li>
+</ol>
+<h3 id="7-安全设计："><a href="#7-安全设计：" class="headerlink" title="7. 安全设计："></a>7. 安全设计：</h3><ol>
+<li>API网关</li>
+<li>用户鉴权</li>
+<li>黑名单（ip黑名单和用户黑名单）</li>
+</ol>
+<h3 id="8-性能优化："><a href="#8-性能优化：" class="headerlink" title="8. 性能优化："></a>8. 性能优化：</h3><ol>
+<li>缓存热点数据防止击穿。</li>
+<li>使用布隆过滤器防止缓存穿透</li>
+<li>黑名单以及限流器防止雪崩</li>
+<li>用户的token存放位置</li>
+</ol>
+<h3 id="9-扩展性设计："><a href="#9-扩展性设计：" class="headerlink" title="9. 扩展性设计："></a>9. 扩展性设计：</h3><ol>
+<li>应用服务水平扩展: Docker容器化技术和K8s部署</li>
+<li>数据水平扩展：mongodb的分片</li>
+<li>缓存水平扩展：redis的哈希槽</li>
+</ol>
+<h3 id="10-监控与日志："><a href="#10-监控与日志：" class="headerlink" title="10. 监控与日志："></a>10. 监控与日志：</h3><ol>
+<li>全链路追踪：skywaling 和 traceId</li>
+<li>日志：Grafana 记录以及可视化</li>
+<li>监控到问题可以使用 短息或者微信通知给开发人员</li>
+</ol>
+<h2 id="三、测试"><a href="#三、测试" class="headerlink" title="三、测试"></a>三、测试</h2><h3 id="1-单元测试："><a href="#1-单元测试：" class="headerlink" title="1.单元测试： "></a>1.单元测试： 
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/images/projects/domain/test_unit.png" >
+        </sapn>
+      </h3><h3 id="2-集成测试："><a href="#2-集成测试：" class="headerlink" title="2.集成测试： "></a>2.集成测试： 
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://floralatin-blog.oss-cn-beijing.aliyuncs.com/images/projects/domain/test_integration.png" >
+        </sapn>
+      </h3><p>#####(1)生成短地址的用例测试</p>
+<table>
+<thead>
+<tr>
+<th>用例</th>
+<th>输入</th>
+<th>输出</th>
+<th>预期结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不能生成短地址</td>
+<td>1.正常的Url <br>2.header没有设置’Authentication’</td>
+<td>404, “Authentication token missing”</td>
+<td>失败</td>
+</tr>
+<tr>
+<td>不能生成短地址</td>
+<td>1.正常的Url <br>2.header设置错误’Authentication’</td>
+<td>401, “Wrong authentication token”</td>
+<td>失败</td>
+</tr>
+<tr>
+<td>不能生成短地址</td>
+<td>1.非正常的Url（带有脚本注入） <br>2.header设置正确’Authentication’</td>
+<td>400, “Invalid URL”</td>
+<td>失败</td>
+</tr>
+<tr>
+<td>不能生成短地址</td>
+<td>1.没有url参数 <br>2.header设置正确’Authentication</td>
+<td>400, “Invalid URL”</td>
+<td>失败</td>
+</tr>
+<tr>
+<td>不能生成短地址</td>
+<td>1.超级长(超过2082个字符)的的Url <br>2.header设置正确’Authentication’</td>
+<td>400, “Invalid URL”</td>
+<td>失败</td>
+</tr>
+<tr>
+<td>正常生成短地址</td>
+<td>1.正常的Url <br>2.header设置正确’Authentication’</td>
+<td>200, “{url: http:127.0.0.1&#x2F;wqemdawd}”</td>
+<td>成功生成短地址</td>
+</tr>
+<tr>
+<td>正常生成短地址</td>
+<td>1.同样的的Url <br>2.header设置正确’Authentication’</td>
+<td>200, “{url: http:127.0.0.1&#x2F;wqemdawd}”，返回已存在的短地址，不会重新生成</td>
+<td>成功返回短地址</td>
+</tr>
+<tr>
+<td>正常生成短地址</td>
+<td>1.超级长(2083个字符以内)的的Url <br>2.header设置正确’Authentication’</td>
+<td>200, “{url: http:127.0.0.1&#x2F;sdadasd}”</td>
+<td>成功生成短地址</td>
+</tr>
+<tr>
+<td>正常生成短地址</td>
+<td>1.统一的Url <br>2.header设置正确’Authentication’, 使用两个不同的用户</td>
+<td>生成两个同的短地址</td>
+<td>生成两个同的短地址</td>
+</tr>
+<tr>
+<td>正常生成短地址</td>
+<td>1.超级长(2083个字符以内)的的Url <br>2.header设置正确’Authentication’, 使用两个不同的用户,(第一个用户是黑名单)，第二用户不是黑名单</td>
+<td>第一个用户访问返回 403，第二个成功生成短地址，200</td>
+<td>第一个用户不能生成短地址，第二个用户成功生成短地址</td>
+</tr>
+</tbody></table>
+<p>#####(2)重定向长地址的用例测试</p>
+<table>
+<thead>
+<tr>
+<th>用例</th>
+<th>输入</th>
+<th>输出</th>
+<th>预期结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正常跳转到长地址</td>
+<td>1.已经存在的短地址</td>
+<td>302 重定向</td>
+<td>正常跳转</td>
+</tr>
+<tr>
+<td>正常跳转到长地址</td>
+<td>1.同一个已经存在的短地址</td>
+<td>302 重定向，从cache中获取</td>
+<td>正常跳转</td>
+</tr>
+<tr>
+<td>不正常跳转到长地址</td>
+<td>1.不存在的短地址</td>
+<td>404 ‘not found’</td>
+<td>不能正常跳转</td>
+</tr>
+<tr>
+<td>不正常跳转到长地址</td>
+<td>1.错误的短地址code</td>
+<td>400 ‘Invalid Code’</td>
+<td>不能正常跳转</td>
+</tr>
+<tr>
+<td>不正常跳转到长地址</td>
+<td>1.错误的短地址code长度超过8位</td>
+<td>400 ‘Invalid Code’</td>
+<td>不能正常跳转</td>
+</tr>
+<tr>
+<td>不正常跳转到长地址</td>
+<td>1.正常短地址code， 2同一个IP地址 1 秒内请求10次以上</td>
+<td>403 ‘You are blacklisted.’</td>
+<td>不能正常跳转</td>
+</tr>
+<tr>
+<td>不正常跳转到长地址</td>
+<td>1.正常短地址code， 2同一个IP地址一天内请求500次以上</td>
+<td>429 ‘Too Many Requests’</td>
+<td>不能正常跳转</td>
+</tr>
+</tbody></table>
+<h2 id="四、表设计"><a href="#四、表设计" class="headerlink" title="四、表设计"></a>四、表设计</h2><p>使用Mongodb来存储</p>
+<p><strong>Url：</strong></p>
+<table>
+<thead>
+<tr>
+<th>列明</th>
+<th>数据类型</th>
+<th>索引</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uid</td>
+<td>string</td>
+<td>主键 唯一 分片键</td>
+<td>记录uid （雪花算法生成）</td>
+</tr>
+<tr>
+<td>code</td>
+<td>string</td>
+<td>Y</td>
+<td>短地址code码（0-8位）</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>Y 哈希索引</td>
+<td>原地址</td>
+</tr>
+<tr>
+<td>userUid</td>
+<td>string</td>
+<td>Y</td>
+<td>用户uid</td>
+</tr>
+<tr>
+<td>expiredTime</td>
+<td>Date</td>
+<td>N</td>
+<td>记录uid</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Date</td>
+<td>N</td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Date</td>
+<td>N</td>
+<td>更新时间</td>
+</tr>
+<tr>
+<td>available</td>
+<td>Boolean</td>
+<td>N</td>
+<td>逻辑删除键</td>
+</tr>
+</tbody></table>
+<p><strong>User：</strong></p>
+<table>
+<thead>
+<tr>
+<th>列明</th>
+<th>数据类型</th>
+<th>索引</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uid</td>
+<td>string</td>
+<td>唯一，分片键</td>
+<td>记录uid （雪花算法生成）</td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>哈希索引，唯一</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>N</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>salt</td>
+<td>string</td>
+<td>N</td>
+<td>密码加盐</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Date</td>
+<td>N</td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Date</td>
+<td>N</td>
+<td>更新时间</td>
+</tr>
+<tr>
+<td>available</td>
+<td>Boolean</td>
+<td>N</td>
+<td>逻辑删除键</td>
+</tr>
+</tbody></table>
+<p><strong>Statistics：</strong></p>
+<table>
+<thead>
+<tr>
+<th>列明</th>
+<th>数据类型</th>
+<th>索引</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uid</td>
+<td>string</td>
+<td>Y,唯一</td>
+<td>记录 uid</td>
+</tr>
+<tr>
+<td>urlUid</td>
+<td>string</td>
+<td>Y</td>
+<td>url的uid，并作为shardKey</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>string</td>
+<td>N</td>
+<td>用户访问ip</td>
+</tr>
+<tr>
+<td>referer</td>
+<td>string</td>
+<td>N</td>
+<td>跳转的网页</td>
+</tr>
+<tr>
+<td>userAgent</td>
+<td>string</td>
+<td>N</td>
+<td>客户端信息包括浏览器信息，os信息等</td>
+</tr>
+<tr>
+<td>language</td>
+<td>string</td>
+<td>N</td>
+<td>用户使用的语言</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>string</td>
+<td>N</td>
+<td>客户端接受的信息配置</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Date</td>
+<td>N</td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>available</td>
+<td>Boolean</td>
+<td>N</td>
+<td>逻辑删除键</td>
+</tr>
+</tbody></table>
+
+        <!-- 分类文章 -->
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%B8%80%E3%80%81%E9%9C%80%E6%B1%82"><span class="space-toc-text">一、需求</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9C%B0%E5%9D%80"><span class="space-toc-text">代码地址</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BA%8C%E3%80%81%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="space-toc-text">二、架构设计</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%B8%89%E3%80%81%E6%B5%8B%E8%AF%95"><span class="space-toc-text">三、测试</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9B%9B%E3%80%81%E8%A1%A8%E8%AE%BE%E8%AE%A1"><span class="space-toc-text">四、表设计</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a target="_blank" rel="noopener" href="http://github.com/floralatin">floralatin</a></p>
+
+    </div>
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/floralatin" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:floralatin@outlook.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+</body>
+</html>
